@@ -24,10 +24,9 @@ const PageHeader = () => {
                             <SignInButton>
                                 <Button className='mr-2'>Sign in</Button>
                             </SignInButton>
-                            {/* <SignUpButton>
+                            <SignUpButton>
                                 <Button>Sign up</Button>
-                            </SignUpButton> */}
-                            
+                            </SignUpButton>
                         </SignedOut>
                         <SignedIn>
                             <UserButton />
