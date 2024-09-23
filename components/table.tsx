@@ -19,6 +19,7 @@ import {
 import { InferSelectModel } from 'drizzle-orm'
 import { feedbacks, projects } from '@/db/schema'
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
+import Ratings from './ratings';
 
 // import { makeData, Person } from './makeData'
 
@@ -43,6 +44,15 @@ function Table(props: { data: Feedback[]}) {
         id: 'userEmail',
         cell: info => info.getValue(),
         header: () => <span>Email</span>,
+        footer: props => props.column.id,
+      },
+      {
+        accessorFn: row => row.rating,
+        id: 'rating',
+        cell: info => info.getValue() !== null ? 
+          <Ratings rating={info.getValue() as number} count={5} /> : 
+          <span>N/A</span>,
+        header: () => <span>Rating</span>,
         footer: props => props.column.id,
       },
       {
@@ -251,7 +261,7 @@ function Filter({
           ])
         }
         placeholder={`Min`}
-        className="w-24 border shadow rounded"
+        className="w-[64px] border shadow rounded p-1 text-slate-800 font-medium"
       />
       <input
         type="number"
@@ -263,7 +273,7 @@ function Filter({
           ])
         }
         placeholder={`Max`}
-        className="w-24 border shadow rounded"
+        className="w-[64px] border shadow rounded p-1 text-slate-800 font-medium"
       />
     </div>
   ) : (

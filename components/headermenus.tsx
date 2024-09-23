@@ -22,7 +22,7 @@ const HeaderMenus = () => {
     };
 
   return (
-    <DropdownMenu open={open}>
+    <DropdownMenu open={open} onOpenChange={toggleMenu}>
         <DropdownMenuTrigger asChild>
             <Button onClick={toggleMenu} className='mr-4' variant='secondary'>
                 {/* Open */}
