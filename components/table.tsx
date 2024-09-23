@@ -102,7 +102,7 @@ function MyTable({
   return (
     <div className="p-2 mt-5">
       <div className="h-2" />
-      <table>
+      <table className='w-full'>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className='border-b border-slate-500'>
@@ -140,10 +140,10 @@ function MyTable({
         <tbody>
           {table.getRowModel().rows.map(row => {
             return (
-              <tr key={row.id}>
+              <tr key={row.id} className=''>
                 {row.getVisibleCells().map(cell => {
                   return (
-                    <td key={cell.id} className='p-2 border-b' style={{
+                    <td key={cell.id} className='p-4 border-b' style={{
                         width: cell.column.getSize(),
                     }}>
                       {flexRender(

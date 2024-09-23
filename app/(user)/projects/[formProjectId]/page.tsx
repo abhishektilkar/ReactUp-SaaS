@@ -21,13 +21,13 @@ const page = async ({params}: {params: {formProjectId: string}}) => {
         <div>
             {/* page {params.formProjectId} */}
             <div>
-                <Link className='text-indigo-500 font-medium flex items-center mb-3' href='/projects'>
+                <Link className='text-indigo-500 font-medium flex items-center mb-5 w-fit' href='/dashboard'>
                     <ChevronLeft className='h-5 w-5 mr-1' /><span className='text-lg'>Back to Projects</span>
                 </Link>
             </div>
             <div className='flex justify-between items-start'>
                 <div className='proj-info'>
-                    <h1 className='text-3xl font-bold mb-3'>{ projects[0].name }</h1>
+                    <h1 className='text-3xl font-bold mb-3 w-fit'>{ projects[0].name }</h1>
                     <h2 className='text-primary-background text-xl mb-2'>{project.description || 'value'}</h2>
                 </div>
                 {
