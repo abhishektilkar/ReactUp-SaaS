@@ -20,20 +20,14 @@ const page = async ({params}: {params: {formProjectId: string}}) => {
     return (
         <div>
             {/* page {params.formProjectId} */}
-            <div>
+            <div className='flex justify-between items-start'>
                 <Link className='text-indigo-500 font-medium flex items-center mb-5 w-fit' href='/dashboard'>
                     <ChevronLeft className='h-5 w-5 mr-1' /><span className='text-lg'>Back to Projects</span>
                 </Link>
-            </div>
-            <div className='flex justify-between items-start'>
-                <div className='proj-info'>
-                    <h1 className='text-3xl font-bold mb-3 w-fit'>{ projects[0].name }</h1>
-                    <h2 className='text-primary-background text-xl mb-2'>{project.description || 'value'}</h2>
-                </div>
                 <div className='flex flex-col'>
                     {
                         project.url ?
-                        <Link className='underline text-indigo-500 font-medium flex items-center' href={project.url}>
+                        <Link target='_blank' className='underline text-indigo-500 font-medium flex items-center' href={project.url}>
                             <Globe className='h-5 w-5 mr-1' /><span className='text-lg'>Visit Site</span>
                         </Link> : null
                     }
@@ -45,6 +39,13 @@ const page = async ({params}: {params: {formProjectId: string}}) => {
                             Embed Code
                         </span>
                     </Link>
+                </div>
+            </div>
+            
+            <div className='flex justify-between items-start'>
+                <div className='proj-info'>
+                    <h1 className='text-3xl font-bold mb-3 w-fit'>{ projects[0].name }</h1>
+                    <h2 className='text-primary-background text-xl mb-2'>{project.description || 'value'}</h2>
                 </div>
             </div>
             <div>
