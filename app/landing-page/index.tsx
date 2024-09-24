@@ -1,15 +1,15 @@
-import React from 'react'
-import PricingSection from './pricing-section'
+import PricingSection from './pricing-section';
+import Hero from './hero';
+import FeaturesSection from './features-section';
 
-const Landing = () => {
+const LandingPage = () => {
   return (
     <div>
-      {/* Landing */}
+      <Hero />
+      <FeaturesSection />
       <PricingSection />
-      
-
     </div>
-  )
+  );
 }
 
-export default Landing
+export default LandingPage;
