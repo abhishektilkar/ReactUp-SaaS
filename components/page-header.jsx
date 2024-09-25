@@ -10,9 +10,9 @@ import { Button } from './ui/button';
 
 const PageHeader = () => {
     return(
-        <header className='sticky insert-x-0 top-0 z-30 w-full transition-all'>
+        <header className='sticky insert-x-0 top-0 z-30 mx-auto max-w-screen-lg transition-all bg-white/20 backdrop-blur-md'>
             {/* PageHeader */}
-            <div className='w-full max-w-screen-xl px-2.5 lg:px-20 relative mx-auto border-b'>
+            <div className='w-full max-w-screen-xl px-2 relative mx-auto border-b'>
                 <div className='flex h-14 items-center justify-between'>
                 {/* mr-4 pr-2 m-4 p-2 */}
                     <Link href={'/'} >
