@@ -2,7 +2,7 @@ import NewProjectBtn from '@/components/new-project'
 import React from 'react'
 import { db } from '@/db'
 import { projects } from '@/db/schema'
-import { auth, currentUser } from '@clerk/nextjs/server'
+import { auth } from '@clerk/nextjs/server'
 import { eq } from 'drizzle-orm'
 import ProjectsList from './project-list'
 

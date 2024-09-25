@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+// import ReactDOM from 'react-dom/client'
 
 // import './index.css'
 
@@ -27,9 +27,9 @@ import Ratings from './ratings';
 type Feedback = InferSelectModel<typeof feedbacks>;
 function Table(props: { data: Feedback[]}) {
 
-  type Project = InferSelectModel<typeof projects>;
+  // type Project = InferSelectModel<typeof projects>;
 
-  const rerender = React.useReducer(() => ({}), {})[1]
+  // const rerender = React.useReducer(() => ({}), {})[1]
 
   const columns = React.useMemo<ColumnDef<Feedback>[]>(
     () => [

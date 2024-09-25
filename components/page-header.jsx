@@ -1,5 +1,5 @@
 import {
-    ClerkProvider,
+    // ClerkProvider,
     SignInButton,
     SignUpButton,
     SignedIn,
