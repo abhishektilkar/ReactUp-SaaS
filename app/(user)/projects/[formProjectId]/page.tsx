@@ -18,9 +18,9 @@ const page = async ({params}: {params: {formProjectId: string}}) => {
     // console.log(JSON.stringify(projects));
     const project = projects[0];
     return (
-        <div>
+        <div className='mx-auto max-w-screen-lg m-1'>
             {/* page {params.formProjectId} */}
-            <div className='flex justify-between items-start'>
+            <div className='flex justify-between  items-start p-3'>
                 <Link className='text-indigo-500 font-medium flex items-center mb-5 w-fit' href='/dashboard'>
                     <ChevronLeft className='h-5 w-5 mr-1' /><span className='text-lg'>Back to Projects</span>
                 </Link>
@@ -42,7 +42,7 @@ const page = async ({params}: {params: {formProjectId: string}}) => {
                 </div>
             </div>
             
-            <div className='flex justify-between items-start'>
+            <div className='flex justify-between items-start p-2 m-1'>
                 <div className='proj-info'>
                     <h1 className='text-3xl font-bold mb-3 w-fit'>{ projects[0].name }</h1>
                     <h2 className='text-primary-background text-xl mb-2'>{project.description || 'value'}</h2>

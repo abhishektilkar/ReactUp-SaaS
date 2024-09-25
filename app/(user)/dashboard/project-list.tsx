@@ -17,7 +17,7 @@ const ProjectsList = (props: Props) => {
     <div>
         {/* ProjectsList */}
         
-        <ul className='grid grid-cols-1 md:grid-cols-3 m-5 p-4 gap-4'>
+        <ul className='grid grid-cols-1 md:grid-cols-3 mt-5 p-2 gap-4'>
             {props.projects.map((project) => (
                 <li key={project.id}>
                     {/* {project.name || 'Sample'} */}

@@ -7,7 +7,7 @@ const Instructions = ({params}: {params: {formProjectId: string}}) => {
   if (!process.env.WIDGET_URL) return (<div>WIDGET_URL not available</div>)
 
   return (
-    <div>
+    <div className='max-w-screen-lg mx-auto p-4 m-1'>
         <h1 className='text-xl font-bold mb-2'>Start Collecting Feedback</h1>
         <p className='text-lg text-secondary-foreground '>Embed the code in your site</p>
         <div className='bg-blue-950 p-6 rounded-sm mt-6 relative'>

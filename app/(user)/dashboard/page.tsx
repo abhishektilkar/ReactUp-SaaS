@@ -14,8 +14,8 @@ const page = async () => {
 
 
   return (
-    <div>
-      <div className='flex items-center justify-center gap-3'>
+    <div className='max-w-screen-lg mx-auto'>
+      <div className='flex items-center justify-center gap-3 m-5'>
         <h1 className='text-3xl font-bold text-center my-4'>Your Projects</h1>
         <NewProjectBtn />
       </div>
