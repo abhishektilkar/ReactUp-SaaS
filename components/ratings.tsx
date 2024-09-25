@@ -4,7 +4,7 @@ import React from 'react'
 const Ratings = ({ rating, count }: { rating: number, count: number }) => {
   return (
     <div className='flex items-center gap-2'>
-        {count}
+        {count === 5}
         {[...Array(5)].map((_, index) => (
             <StarIcon 
                 key={index}
